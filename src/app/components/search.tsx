@@ -1,3 +1,5 @@
+"use client";
+
 import SearchIcon from "@/public/icons/search.svg";
 import Image from "next/image";
 

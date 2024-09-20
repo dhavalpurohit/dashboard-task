@@ -69,9 +69,17 @@ const SideNavBar: React.FC<SidebarProps> = ({ onToggle }) => {
           className="p-4 text-gray-400 hover:text-gray-100 focus:outline-none"
         >
           {isOpen ? (
-            <Image src={ArrowIcon} alt={"ArrowIcon"} />
+            <Image
+              src={ArrowIcon}
+              alt={"ArrowIcon"}
+              className="min-w-6 min-h-6 w-6 h-6"
+            />
           ) : (
-            <Image src={HamburgerMenu} alt={"HamburgerMenu"} />
+            <Image
+              src={HamburgerMenu}
+              alt={"HamburgerMenu"}
+              className="min-w-6 min-h-6 w-6 h-6"
+            />
           )}
         </button>
         {isOpen && <h1 className="text-2xl">Logo</h1>}

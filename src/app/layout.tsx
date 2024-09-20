@@ -28,7 +28,9 @@ export default function RootLayout({
             }`}
           >
             <Header />
-            <main className="flex-1 p-4 overflow-auto">{children}</main>
+            <main className="flex-1 px-10 py-6 overflow-auto w-full h-[calc(100vh-90px)]">
+              {children}
+            </main>
           </div>
         </div>
       </body>

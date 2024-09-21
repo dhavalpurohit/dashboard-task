@@ -3,6 +3,7 @@ import Button from "@/app/components/button";
 import CalendarIcon from "@/public/icons/calendar_month.svg";
 import CardInfo from "./cardInfo";
 import TicketInfo from "./ticketInfo";
+import BarChart from "./barChart";
 
 export const metadata = {
   title: "Dashboard",
@@ -29,6 +30,7 @@ const DashboardPage = () => {
       <div className="flex w-full gap-6 pt-6">
         <div className="w-3/4">
           <CardInfo />
+          <BarChart />
         </div>
         <div className="w-1/4">
           <TicketInfo />

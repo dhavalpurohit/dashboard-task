@@ -19,7 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`bg-lavender`}>
+      <body className="bg-lavender dark:bg-gray-800">
         <div className="flex">
           <SideNavBar onToggle={handleSidebarToggle} />
           <div

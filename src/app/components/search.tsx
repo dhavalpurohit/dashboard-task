@@ -10,7 +10,7 @@ const Search = () => {
       <input
         type="text"
         placeholder="Search anything..."
-        className="w-full border-none focus:outline-none text-gray-700"
+        className="w-full border-none focus:outline-none text-gray-700 dark:text-white bg-transparent"
       />
     </div>
   );

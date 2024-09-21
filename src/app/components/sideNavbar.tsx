@@ -57,7 +57,7 @@ const SideNavBar: React.FC<SidebarProps> = ({ onToggle }) => {
   };
   return (
     <div
-      className={`fixed top-0 left-0 h-full bg-white text-black transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 h-full bg-white text-black dark:bg-black dark:text-white transition-all duration-300 ease-in-out ${
         isOpen ? "w-64" : "w-16"
       }`}
       onMouseEnter={onMouseEnter}
@@ -72,13 +72,13 @@ const SideNavBar: React.FC<SidebarProps> = ({ onToggle }) => {
             <Image
               src={ArrowIcon}
               alt={"ArrowIcon"}
-              className="min-w-6 min-h-6 w-6 h-6"
+              className="min-w-6 min-h-6 w-6 h-6 dark:bg-white dark:rounded-md"
             />
           ) : (
             <Image
               src={HamburgerMenu}
               alt={"HamburgerMenu"}
-              className="min-w-6 min-h-6 w-6 h-6"
+              className="min-w-6 min-h-6 w-6 h-6 dark:bg-white dark:rounded-md"
             />
           )}
         </button>
@@ -93,14 +93,18 @@ const SideNavBar: React.FC<SidebarProps> = ({ onToggle }) => {
               <Link
                 href={item.href}
                 key={index}
-                className={`relative flex items-center p-4 hover:bg-light_grey transition-colors duration-200 ${
+                className={`relative flex items-center p-4 hover:bg-light_grey dark:hover:bg-gray-800 transition-colors duration-200 ${
                   activeIndex === index
-                    ? "bg-light_grey before:absolute before:h-full before:w-1.5 before:bg-black before:left-0 before:rounded-e-md"
+                    ? "bg-light_grey dark:bg-gray-800 before:absolute before:h-full before:w-1.5 before:bg-black dark:before:bg-white before:left-0 before:rounded-e-md"
                     : ""
                 }`}
                 onClick={() => handleMenuClick(index)}
               >
-                <Image src={item.Icon} alt={"Home"} />
+                <Image
+                  src={item.Icon}
+                  alt={"Home"}
+                  className="dark:bg-white dark:rounded-md"
+                />
                 <span
                   className={`ml-4 ${
                     isOpen ? "opacity-100" : "opacity-0"
@@ -115,9 +119,13 @@ const SideNavBar: React.FC<SidebarProps> = ({ onToggle }) => {
         <div className="mt-auto">
           <Link
             href="/help"
-            className="relative flex items-center p-4 hover:bg-light_grey transition-colors duration-200"
+            className="relative flex items-center p-4 hover:bg-light_grey dark:hover:bg-gray-800 dark:text-white transition-colors duration-200"
           >
-            <Image src={HelpIcon} alt={"help"} />
+            <Image
+              src={HelpIcon}
+              alt={"help"}
+              className="dark:bg-white dark:rounded-md"
+            />
             <span
               className={`ml-4 ${
                 isOpen ? "opacity-100" : "opacity-0"
@@ -128,9 +136,13 @@ const SideNavBar: React.FC<SidebarProps> = ({ onToggle }) => {
           </Link>
           <Link
             href="/setting"
-            className="relative flex items-center p-4 hover:bg-light_grey transition-colors duration-200"
+            className="relative flex items-center p-4 hover:bg-light_grey dark:hover:bg-gray-800 dark:text-white transition-colors duration-200"
           >
-            <Image src={SettingIcon} alt={"setting"} />
+            <Image
+              src={SettingIcon}
+              alt={"setting"}
+              className="dark:bg-white dark:rounded-md"
+            />
             <span
               className={`ml-4 ${
                 isOpen ? "opacity-100" : "opacity-0"

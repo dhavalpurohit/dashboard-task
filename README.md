@@ -24,5 +24,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Features
 
+-
 - The sidebar works with hover effects, allowing for an intuitive user experience. Users can also utilize a toggle button for additional click interactions, providing quick access to the menu options.
+
 - Users can easily switch between light and dark theme modes, enhancing accessibility and allowing for a more customized viewing experience based on user preferences.
+
+- The project utilizes reusable components, promoting DRY (Don't Repeat Yourself) principles and making it easier to maintain and scale the application.
+
+- Tailwind CSS is implemented with a common configuration, allowing for rapid styling and a consistent design language throughout the application.

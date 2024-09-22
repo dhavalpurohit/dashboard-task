@@ -77,7 +77,7 @@ const DashboardPage = () => {
               <BarChart />
             </div>
           </div>
-          <Card className="mb-4">
+          <Card className="mb-4 hover !h-auto">
             <h1 className="font-bold text-xl text-night dark:text-white">
               Top Service Providers
             </h1>

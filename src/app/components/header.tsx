@@ -20,7 +20,7 @@ const Header = () => {
   const SettingData = ["SettingData 1", "SettingData 2", "SettingData 3"];
 
   return (
-    <div className="h-90 bg-white dark:bg-black py-4 px-10 flex items-center ">
+    <div className="h-90 bg-white dark:bg-black py-4 px-10 flex items-center border-b border-lavender dark:border-gray-800">
       <Search />
       <div className="flex items-center ml-auto gap-5 h-full">
         <div className="flex items-center gap-5">

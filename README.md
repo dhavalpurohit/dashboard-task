@@ -24,7 +24,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Features
 
--
 - The sidebar works with hover effects, allowing for an intuitive user experience. Users can also utilize a toggle button for additional click interactions, providing quick access to the menu options.
 
 - Users can easily switch between light and dark theme modes, enhancing accessibility and allowing for a more customized viewing experience based on user preferences.

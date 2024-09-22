@@ -19,6 +19,28 @@ const ticketArray = [
     discription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   },
+  {
+    img: UserImg,
+    id: 19273645,
+    raiser_name: " Raiser Name",
+    status: "Technical Error",
+    dapartment: "Healthcare",
+    issues: "Acknowledged",
+    heading: "I am facing Technical Issue during the Signup process",
+    discription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  },
+  {
+    img: UserImg,
+    id: 19273645,
+    raiser_name: " Raiser Name",
+    status: "Technical Error",
+    dapartment: "Healthcare",
+    issues: "Acknowledged",
+    heading: "I am facing Technical Issue during the Signup process",
+    discription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  },
 ];
 const TicketInfo = () => {
   return (
@@ -42,32 +64,60 @@ const TicketInfo = () => {
           <div className="bg-amber h-7 rounded-full w-1/2"></div>
         </div>
 
-        <div className="flex items-center justify-between">
-          <div className="text-black_opacity_80 dark:text-white text-base font-medium">
-            Pending Tickets (03)
-          </div>
-          <button className="text-theme_blue text-sm font-medium bg-ghost_white px-4 py-1 rounded-full">
-            View All
-          </button>
-        </div>
+        <div className="flex flex-col gap-6">
+          <div>
+            <div className="flex items-center justify-between">
+              <div className="text-black_opacity_80 dark:text-white text-base font-medium">
+                Pending Tickets ({ticketArray.length})
+              </div>
+              <button className="text-theme_blue text-sm font-medium bg-ghost_white px-4 py-1 rounded-full">
+                View All
+              </button>
+            </div>
 
-        {Array.from({ length: 3 }).map((_, repeatIndex) =>
-          ticketArray.map((item, index) => {
-            return (
-              <TicketCard
-                key={index}
-                img={item.img}
-                id={item.id}
-                raiser_name={item.raiser_name}
-                status={item.status}
-                dapartment={item.dapartment}
-                issues={item.issues}
-                heading={item.heading}
-                discription={item.discription}
-              />
-            );
-          })
-        )}
+            {ticketArray.map((item, index) => {
+              return (
+                <TicketCard
+                  key={index}
+                  img={item.img}
+                  id={item.id}
+                  raiser_name={item.raiser_name}
+                  status={item.status}
+                  dapartment={item.dapartment}
+                  issues={item.issues}
+                  heading={item.heading}
+                  discription={item.discription}
+                />
+              );
+            })}
+          </div>
+          <div>
+            <div className="flex items-center justify-between">
+              <div className="text-black_opacity_80 dark:text-white text-base font-medium">
+                Pending Tickets ({ticketArray.length})
+              </div>
+              <button className="text-theme_blue text-sm font-medium bg-ghost_white px-4 py-1 rounded-full">
+                View All
+              </button>
+            </div>
+
+            {ticketArray.map((item, index) => {
+              return (
+                <TicketCard
+                  key={index}
+                  img={item.img}
+                  id={item.id}
+                  raiser_name={item.raiser_name}
+                  status={item.status}
+                  dapartment={item.dapartment}
+                  issues={item.issues}
+                  heading={item.heading}
+                  discription={item.discription}
+                />
+              );
+            })}
+          </div>
+        </div>
       </Card>
     </div>
   );

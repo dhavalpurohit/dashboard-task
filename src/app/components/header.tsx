@@ -5,10 +5,11 @@ import ProfileDropdown from "./profileDropdown";
 import NotificationIcon from "@/public/icons/notification.svg";
 import MessageIcon from "@/public/icons/messages.svg";
 import SettingRedIcon from "@/public/icons/setting-red.svg";
-import { useEffect, useState } from "react";
+
+import { useTheme } from "@/services/ThemeContext";
 
 const Header = () => {
-  const [theme, seTheme] = useState(localStorage.getItem("theme") || "light");
+  const { toggleTheme, theme } = useTheme();
 
   const NotifcationData = [
     "Notification 1",
@@ -17,20 +18,6 @@ const Header = () => {
   ];
   const ChatData = ["Chat 1", "Chat 2", "Chat 3"];
   const SettingData = ["SettingData 1", "SettingData 2", "SettingData 3"];
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    seTheme(theme === "dark" ? "light" : "dark");
-  };
 
   return (
     <div className="h-90 bg-white dark:bg-black py-4 px-10 flex items-center ">

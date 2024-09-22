@@ -32,6 +32,10 @@ const config: Config = {
         coral_pink_10: "rgba(255, 132, 124, 0.1)",
         jet: "#2F2924",
         slate_gray: "#72768B",
+        palatinate_blue: "#4A3AFF",
+        ultra_violet: " #615E83",
+        space_cadet: "#1E1B39",
+        honeydew: "#E6F8EF",
       },
       spacing: {
         90: "90px",
